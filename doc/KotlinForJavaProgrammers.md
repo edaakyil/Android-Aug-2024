@@ -11058,8 +11058,8 @@ class Mample<in T>(var y: T) //error
 >out ve in anahtar sözcükleri eğer sınıfın bildirimde yazılacak ve property elemanlarının mutable olması istenirse tür ismi kullanımında UnsafeVariance annotation'ı kullanılmalıdır. Bu durumun detayları ileride anlaşılacaktır
 
 ```kotlin
-class Sample<out T>(var x: @UnsafeVariance T) //error  
-class Mample<in T>(var y: @UnsafeVariance T) //error
+class Sample<out T>(var x: @UnsafeVariance T)   
+class Mample<in T>(var y: @UnsafeVariance T) 
 ```
 
 >Generic parametrelere kısıtlar (constraint) verilebilir. Aşağıdaki örnekte Sample sınıfının T generic parametresinin türünün Closeable arayüzünü destekkleyen bir tür ile açılımı zorunludur. Bu kısıta aynı zamanda üstten sınır (upper bound) da denilmektedir
